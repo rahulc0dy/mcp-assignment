@@ -70,7 +70,7 @@ const FixedNav = () => {
                       </Link>
                       <Link
                         className="hover:text-primary-text p-2"
-                        href="https://github.com/Souvik606/SARDS"
+                        href="https://github.com/rahulc0dy/mcp-assignment"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ const FixedNav = () => {
                       </Link>
                       <Link
                         className="hover:text-primary-text p-2"
-                        href="https://x.com/rahulc0dy"
+                        href="https://www.linkedin.com/in/rahulc0dy/"
                       >
                         <svg
                           width="22"
@@ -131,7 +131,7 @@ const FixedNav = () => {
               </Link>
               <Link
                 className="hover:text-primary-text p-2"
-                href="https://github.com/Souvik606/SARDS"
+                href="https://github.com/rahulc0dy/mcp-assignment"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +146,7 @@ const FixedNav = () => {
               </Link>
               <Link
                 className="hover:text-primary-text p-2"
-                href="https://x.com/rahulc0dy"
+                href="https://www.linkedin.com/in/rahulc0dy/"
               >
                 <svg
                   width="22"
