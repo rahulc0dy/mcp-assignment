@@ -1,6 +1,6 @@
 import React from "react";
 
 const DocsPage = () => {
-  return <div>DocsPage</div>;
+  return <div>Docs Page</div>;
 };
 export default DocsPage;

@@ -48,7 +48,10 @@ const FixedNav = () => {
               </button>
               {menu && (
                 <div className="absolute top-16 flex w-full flex-col items-center gap-2 border-b bg-zinc-900/95 p-4 backdrop-blur-3xl transition-all dark:text-zinc-400">
-                  <Link className="hover:text-primary-text" href="/docs">
+                  <Link
+                    className="hover:text-primary-text"
+                    href="https://modelcontextprotocol.io/introduction"
+                  >
                     Docs
                   </Link>
                   <Link className="hover:text-primary-text" href="/test">
@@ -107,7 +110,10 @@ const FixedNav = () => {
               )}
             </div>
             <div className="hidden space-x-4 sm:flex dark:text-zinc-400">
-              <Link className="hover:text-primary-text" href="/docs">
+              <Link
+                className="hover:text-primary-text"
+                href="https://modelcontextprotocol.io/introduction"
+              >
                 Docs
               </Link>
               <Link className="hover:text-primary-text" href="/test">
