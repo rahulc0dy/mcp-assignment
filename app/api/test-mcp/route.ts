@@ -38,11 +38,16 @@ export async function POST(request: Request) {
       message: "MCP server is reachable and responded successfully.",
       data,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    let message = "An error occurred while reaching MCP server.";
+    if (error instanceof Error) {
+      message = error.message;
+    }
+
     return NextResponse.json(
       {
         success: false,
-        message: error.message || "An unexpected error occurred.",
+        message: message,
       },
       { status: 500 }
     );

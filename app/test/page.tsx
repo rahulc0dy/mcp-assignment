@@ -6,7 +6,7 @@ import React, { useState } from "react";
 type TestResult = {
   success: boolean;
   message: string;
-  data?: any;
+  data?: unknown;
 };
 
 export default function TestPage() {
@@ -26,8 +26,12 @@ export default function TestPage() {
       });
       const data: TestResult = await response.json();
       setResult(data);
-    } catch (error: any) {
-      setResult({ success: false, message: error.message });
+    } catch (error: unknown) {
+      let message = "An error occurred while creating test result.";
+      if (error instanceof Error) {
+        message = error.message;
+      }
+      setResult({ success: false, message: message });
     } finally {
       setLoading(false);
     }
@@ -64,11 +68,11 @@ export default function TestPage() {
             className={`rounded p-4 ${result.success ? "bg-accent-100" : "bg-danger-100"}`}
           >
             <p className="font-semibold">{result.message}</p>
-            {result.data && (
+            {result.data !== undefined ? (
               <pre className="mt-2 overflow-auto rounded bg-gray-50 p-2 text-sm">
                 {JSON.stringify(result.data, null, 2)}
               </pre>
-            )}
+            ) : null}
           </div>
         )}
         <div className="text-muted-text mt-8 border-t pt-4 text-sm">
@@ -85,8 +89,8 @@ export default function TestPage() {
               Smithery
             </a>
             ). The test will send a request to verify connectivity and the
-            expected functionality of the MCP server. If successful, you'll see
-            a confirmation message along with additional details.
+            expected functionality of the MCP server. If successful, you&apos;ll
+            see a confirmation message along with additional details.
           </p>
         </div>
       </div>
