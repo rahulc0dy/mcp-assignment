@@ -205,7 +205,7 @@ export default function Home() {
                   <AsteriskIcon className="text-primary-700 size-6" />
                 </div>
                 <h3 className="text-muted-dark mt-4 mb-2 text-center text-lg font-semibold">
-                  TypeScript's Reliability
+                  TypeScript&apos;s Reliability
                 </h3>
                 <p className="text-muted text-center text-sm">
                   Enjoy enhanced code safety and maintainability through full

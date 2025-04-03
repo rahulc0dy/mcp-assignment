@@ -1,11 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ServerCogIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const FixedNav = () => {
+  const path = usePathname();
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    setMenu(false);
+  }, [path]);
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-zinc-700/50 px-4 py-4 backdrop-blur-2xl sm:px-8">
